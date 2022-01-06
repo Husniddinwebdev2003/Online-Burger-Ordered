@@ -150,6 +150,12 @@
     font-size: 17px;
 }
 
+@media (max-width: 350px) { 
+    .CardCode > input::placeholder {
+        font-size: 10px;
+    }
+}
+
 @media (max-width: 400px) {  
     .Title >a {
         padding: 5px 20px;
