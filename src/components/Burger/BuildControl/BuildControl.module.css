@@ -1,0 +1,106 @@
+.BuildControl {
+    width: 100%;
+    min-height: 200px;
+    background: #f08e4a;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.BuildControl ul {
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px 0;
+}
+
+.BuildControl ul li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.BuildControl ul li > span {
+    color: #000;
+    font-weight: 900;
+    display: block;
+    flex-basis: 20%;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.BuildControl ul li > button.Less,button.More {
+    width: 30%;
+    height: 40px;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+}
+
+.BuildControl ul li >button.More {
+    background: #692d02c7;
+    border: 1px solid #999;
+}
+
+.BuildControl ul li >button.Less {
+    background: #e78f1c62;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 16px 0px #f08e4a;
+}
+
+.BuildControl ul li >button.Less:disabled {
+    background: #8381807c;
+    cursor: not-allowed;
+}
+
+.BuildControl ul li >button.More:disabled {
+    cursor: not-allowed;
+}
+
+.BuildControl ul li >button.More:active,
+.BuildControl ul li >button.Less:active {
+    transform: scale(1.1);
+}
+
+.Price {
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
+.Price > span {
+    color: rgba(0, 0, 0, 0.829);
+}
+
+.Price strong {
+    color: #000;
+    font-weight: 900;
+}
+
+
+@media (max-width: 600px) {
+    .BuildControl > ul {
+        width: 90%;
+        padding: 0 8%;
+    }
+    .Price {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 300px) {
+    .BuildControl > ul {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .BuildControl > ul button{
+        transform: scale(.8);
+    }
+    .Price {
+        padding: 2rem 0;
+    }
+}

@@ -1,0 +1,198 @@
+.Payment {
+    padding: 1rem 2rem;
+    background: #f08e4a;
+}
+
+.Payment h1 {
+    font-family: cursive;
+    font-size: 60px;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    font-weight: 900;
+    color: #fff;
+}
+
+.Content {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.PaymentInfo {
+    padding: 1rem;
+    flex-basis: 30%;
+    width: 40%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.PaymentInfo ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-basis: 50%;
+}
+
+.PaymentInfo ol li {
+    font-weight: 600;
+    color: #000;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+.InfoPrice {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding:  0 0 .5rem 0;
+}
+
+.InfoPrice a {
+    font-weight: 500;
+    font-size: 13px;
+    display: inline-block;
+    padding: 10px;
+    background-image: linear-gradient(
+        310deg, #141727 0%, #3A416F 100%);
+        color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Df {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.PaymentCard {
+    padding: 2rem;
+}
+
+.Card {
+    flex-basis: 45% !important;
+    width: 40% !important;
+    padding: 1.5rem;
+    margin: 1rem;
+    background: #f08e4a;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 1rem 0;
+}
+
+.Title > span {
+    color: #fff;
+    font-weight: 600;
+}
+
+.Title >a {
+    display: inline-block;
+    padding: 5px 30px;
+    background-image: linear-gradient(310deg, #141727 0%, #3A416F 100%);
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.CardItem {
+    /* width: 80%; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #141727 ;
+    border-radius: 5px;
+    padding: 1rem;
+    background: #fff;
+}
+
+.CardItem label {
+    padding: 0 10px 0 0;
+}
+
+.CardItem label img {
+    width: 40px;
+}
+
+.CardCode {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.CardCode > input {
+    width: 80px;
+    margin-left: 20px;
+    text-align: center;
+    border: 0px;
+}
+
+.CardCode > input::placeholder {
+    color: #141727;
+    font-size: 17px;
+}
+
+@media (max-width: 400px) {  
+    .Title >a {
+        padding: 5px 20px;
+    }
+}
+
+@media (max-width: 650px) { 
+    .PaymentInfo {
+        flex-basis: 100% !important;
+    }
+    .Card {
+        flex-basis: 100% !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .Card {
+        margin: 10px;
+    }
+    .InfoPrice > span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 850px) {
+    .Content {
+        flex-wrap: wrap;
+    }
+    .PaymentInfo {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .CardCode > input {
+        width: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .CardCode > input {
+        margin-left: 10px;
+        width: 25%;
+        flex-basis: 25%;
+    }
+}

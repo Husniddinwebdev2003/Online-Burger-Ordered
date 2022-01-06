@@ -1,0 +1,102 @@
+.Modal {
+    display: none;
+    position: fixed;
+    min-width: 40%;
+    min-height: 30vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    text-align: start;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    z-index: 9;
+}
+
+.Modal.Active {
+    display: block;
+    animation: modal .3s linear;
+}
+
+@keyframes modal {
+    0%{
+        transform: translate(-50%,-50%) scale(.4);
+        opacity: .3;
+    }
+    100% {
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.Modal.Disconnect {
+    display: block;
+    transition: .24s;
+    transform: translate(-50%,-50%) scale(.3);
+    opacity: .3;
+}
+
+.Modal h2 {
+    color: #000;
+    padding-top: 0;
+}
+
+.Modal ol {
+    list-style: disc;
+    margin: 1rem 0 0 2rem;
+}
+
+.Modal ol li {
+    margin: 5px 0;
+}
+
+.Modal ol li > span {
+    text-transform: capitalize;
+}
+
+.Modal .Df {
+    padding: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Modal .Df p,.Modal .Df a {
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-weight: 600;
+}
+
+.Modal .Df p:hover,.Modal .Df a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.Price {
+    color: #000;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+.Price >strong {
+    color: green;
+    font-weight: 600;
+}
+
+@media (max-width: 850px) {
+    .Modal {
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    .Modal {
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    .Modal {
+        width: 80%;
+        transform: translateY(-50%,-50%) scale(.4);
+    }
+}
