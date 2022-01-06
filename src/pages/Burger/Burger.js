@@ -63,7 +63,7 @@ export default class Burger extends Component {
             return el + item;
         }, 0);
         if(emptyBurger === 0) {
-            emptyBurger = <li className={classesBuilder.emptyBurger}>Iltmos biror narsa qoshing!!!</li>
+            emptyBurger = <li className={classesBuilder.emptyBurger}>Please add something !!!</li>
         } else {
             emptyBurger = null;
         }
