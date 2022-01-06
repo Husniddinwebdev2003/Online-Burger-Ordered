@@ -34,6 +34,7 @@
     font-size: 220px;
     letter-spacing: 10px;
     margin: 0px;
+    padding: 0 0 2rem 0;
     font-weight: 700;
     text-shadow: 2px 2px 0px #c9c9c9, -2px -2px 0px #c9c9c9;
 }

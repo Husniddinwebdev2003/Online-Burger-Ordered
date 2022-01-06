@@ -90,7 +90,7 @@ export default class Burger extends Component {
                                 />
                             <BuildControl 
                                 navOff={this.state.navOff}
-                                setNavOff={() => this.setState({navOff: !this.state.navOff})}
+                                setNavOff={(e) => this.setState({navOff: e})}
                                 Price={this.state.totalPrice.toFixed(2)}
                                 ignarident={this.state.ignaridents} 
                                 addedIgnaridentsHandler={this.addedIgnaridentsHandler} 
@@ -109,7 +109,7 @@ export default class Burger extends Component {
                             setNavOff={(e) => this.setState({navOff: e})}/>
                     </Route>
                     <Route path="/notfound">
-                        <Error />
+                        <Error setNavOff={(e) => this.setState({navOff: e})}/>
                     </Route>
                 </Switch>
             </Aux>

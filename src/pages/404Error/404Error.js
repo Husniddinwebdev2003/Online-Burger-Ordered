@@ -2,7 +2,7 @@ import React from 'react';
 import classes from "./Error.module.css";
 import { Link } from 'react-router-dom';
 
-const Error = () => {
+const Error = (props) => {
     return (
         <div className={classes.Notfound}>
             <div className={classes.Notfound1}>
@@ -11,7 +11,7 @@ const Error = () => {
                 </div>
 
                 <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
-                <Link to="/">home page</Link>
+                <Link to="/" onClick={() => props.setNavOff(false)}>home page</Link>
             </div>
         </div>
     )

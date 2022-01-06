@@ -19,7 +19,7 @@ const BuildControl = (props) => {
             <ul>
                 {BuildControlItem1}
             </ul>
-            <BurgerOrder navOff={props.navOff} setNavOff={props.setNavOff}  price={1*props.Price} emptyBurger={props.emptyBurger} ignarident={props.ignarident}/>
+            <BurgerOrder navOff={props.navOff} setNavOff={(e) => props.setNavOff(e)}  price={1*props.Price} emptyBurger={props.emptyBurger} ignarident={props.ignarident}/>
         </div>
     )
 }
