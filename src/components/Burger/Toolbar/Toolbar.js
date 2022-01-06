@@ -73,7 +73,7 @@ const Toolbar = (props) => {
                             </li>
                             <li 
                                 onClick={() => {
-                                    props.setNavOff(true);
+                                    props.setNavOff(false);
                                     setNavOff(false);
                                 }
                                 }

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import classes from './CheckOut.module.css';
 import MasterCard from "../../assets/img/mastercard.png";
 import Visa from "../../assets/img/visa.png";
+import Humo from "../../assets/img/humo.jpg";
+import Uzcard from "../../assets/img/uzcard.jpg";
 import Card1 from './Card/Card';
 
 
@@ -17,12 +19,12 @@ const CheckOut = (props) => {
             url: Visa
         },
         {
-            title: "MasterCard",
-            url: MasterCard
+            title: "Uzcard",
+            url: Uzcard
         },
         {
-            title: "Visa",
-            url: Visa
+            title: "Humo",
+            url: Humo
         }
     ];
 

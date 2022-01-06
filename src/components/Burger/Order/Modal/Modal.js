@@ -18,7 +18,7 @@ const Modal = (props) => {
         <Backdrop activator={props.show}>
             <div className={props.show ? `${classes.Modal} ${classes.Active}` : `${disconnect}`}>
                 <h2>Your Order</h2>
-                <p>A delicus burger with the following instruff.</p>
+                <p>Eat a dlicious burger with the following.</p>
                 <ol>
                     {li}
                 </ol>
