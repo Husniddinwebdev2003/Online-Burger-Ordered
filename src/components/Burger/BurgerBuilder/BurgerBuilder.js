@@ -9,6 +9,7 @@ const BurgerBuilder = (props) => {
                 return <BurgerIgnerident type={item} key={i} />
             });
         });
+        console.log(ignarident);
     return (
         <div className={classes.Box}>
             <ul>

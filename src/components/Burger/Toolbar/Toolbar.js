@@ -30,19 +30,22 @@ const Toolbar = (props) => {
                 </li>
                 <li>
                     <ul className={classes.Navbar}>
-                        <li 
-                            onClick={() => {
-                                props.setNavOff(false);
-                            }}
-                            className={props.navOff ? null : classes.Active}>
-                            <Link to="/">Burger Builder</Link>
+                        <li>
+                            <Link
+                                onClick={() => {
+                                    props.setNavOff(false);
+                                }}
+                                className={props.navOff ? null : classes.Active}
+                                to="/">Burger Builder</Link>
                         </li>
                         <li 
-                            onClick={() => {
-                                props.setNavOff(true);
-                            }}
-                            className={props.navOff ? classes.Active : null}>
-                            <Link to="/payment">Payment</Link>
+                            >
+                            <Link 
+                                onClick={() => {
+                                    props.setNavOff(true);
+                                }}
+                                className={props.navOff ? classes.Active : null}
+                                to="/payment">Payment</Link>
                         </li>
                     </ul>
                     <div onClick={() => setNavOff(!navOff)} className={classes.Bars}>
@@ -71,22 +74,21 @@ const Toolbar = (props) => {
                                     </Link>
                                 </span>
                             </li>
-                            <li 
-                                onClick={() => {
-                                    props.setNavOff(false);
-                                    setNavOff(false);
-                                }
-                                }
-                                className={props.navOff ? null : classes.Active}>
-                                    <Link to="/">Burger Builder</Link>
+                            <li className={props.navOff ? null : classes.Active}>
+                                    <Link
+                                        onClick={() => {
+                                            props.setNavOff(false);
+                                            setNavOff(false);
+                                        }} 
+                                        to="/">Burger Builder</Link>
                             </li>
-                            <li 
-                                onClick={() => {
-                                    props.setNavOff(true);
-                                    setNavOff(false);
-                                }}
-                                className={props.navOff ? classes.Active : null}>
-                                <Link to="/payment">Payment</Link>
+                            <li className={props.navOff ? classes.Active : null}>
+                                <Link
+                                    onClick={() => {
+                                        props.setNavOff(true);
+                                        setNavOff(false);
+                                    }} 
+                                    to="/payment">Payment</Link>
                             </li>
                         </ul>
                     </Backdrop2>
