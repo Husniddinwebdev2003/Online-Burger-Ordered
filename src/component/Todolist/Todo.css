@@ -1,0 +1,227 @@
+header {
+    height: 100px;
+    line-height: 100px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoForm input {
+    padding: 10px;
+    display: block;
+    width: 300px;
+    border: 0px;
+    outline: none;
+    height: 35px;
+}
+
+.todoForm button {
+    padding: 4px 10px;
+    border: 0px;
+    outline: none;
+    height: 35px;
+    cursor: pointer;
+    color: #ff6f47;
+    background-color: #fff;
+    transform: .2s ease;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.todoForm button:hover {
+    color: #fff;
+    background-color: #ff6f47;
+}
+
+.todoSelect {
+    margin-left: 2rem;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    height: 35px;
+    cursor: pointer;
+}
+
+.todoListContent {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.todoListContent ul {
+    list-style: none;
+    min-width: 300px;
+}
+
+.todoListContent ul li {
+    background-color: #fff;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    line-height: 35px;
+    padding:  0 0 0 10px;
+    margin-bottom: 1rem;
+    transform-origin: 0% 0%;
+}
+
+.todoListContent ul li span {
+    display: block;
+    flex-basis: 80%;
+    text-align: start;
+}
+
+.todoListContent ul li.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: #696969;
+}
+
+.todoBtn {
+    flex-basis: 40%;
+    text-align: end;
+}
+
+.todoBtn button {
+    height: 100%;
+    width: 35px;
+    border: 0px;
+    outline: none;
+    height: 35px;
+    cursor: pointer;
+    background-color: #ff6f47;
+    color: #fff;
+}
+
+.todoBtn button:first-child {
+    background-color: rgb(1, 247, 152);
+}
+
+.todoListContent ul li.delete {
+    transition: all .4s;
+    transform: rotateZ(20deg);
+    opacity: .1;
+}
+
+
+.err {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 98%;
+    background-color: #fff;
+    height: 50px;
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 50px;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.err p {
+    font-weight: 600;
+}
+
+.err::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: red;
+    animation: err 2s linear ;
+}
+
+@keyframes err {
+    0% {
+        width: 100%;
+    }
+    25% {
+        width: 75%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+
+/* media query */
+@media (max-width: 600px) {
+    .todoForm input {
+        width: 280px !important;
+    }
+}
+@media (max-width: 550px) {
+    .todoForm input {
+        width: 230px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    form {
+        justify-content: space-between !important;
+        padding: 0 1rem !important;
+        width: 100%;
+    }
+    .todoForm{
+        flex-basis: 70% !important;
+        width: 70%;
+        justify-content: space-between;
+    }
+    .todoForm input{
+        width: 80% !important;
+        flex-basis: 80% !important;
+    }
+    .todoForm button {
+        width: 25%;
+        flex-basis: 25%;
+    }
+    .todoSelect{
+        flex-basis: 25% !important;
+        width: 25%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+    .todoForm{
+        flex-basis: 70% !important;
+        width: 70%;
+    }
+    .todoSelect{
+        flex-basis: 25% !important;
+        width: 25%;
+        margin-left: 0;
+    }
+    .todoListContent ul {
+        min-width: 100% !important;
+    }
+
+    .todoListContent ul li {
+        width: 100% !important;
+    }
+    .todoBtn button {
+        width: 50% !important;
+    }
+}
